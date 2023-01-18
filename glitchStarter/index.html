@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--- Add the Name of the customers website you are branding for... -->
+    <title>Cisco Systems, Inc.</title>
+<!-- Add the stylesheet and javscript -->   
+<link rel="stylesheet" href="/style.css" />
+<script src="/script.js" defer></script>   
+<!-- Add the stylesheet and javscript -->       
+     
+<!-- add WxCC Chat window via engage chat bubble-->   
+    <!--  Disable this for now, uncomment and put in your custom WxCC engage configuration to tie this to your WxCC Tenant
+    <div id="divicw" data-bind="custom data-bind value from WxCC" data-org=""></div><script>var i={t:function(t){var e="https://media.imi.chat/widget/js/imichatinit.js";try{var o=new XMLHttpRequest;o.onreadystatechange=function(){if(this.readyState==4){var t=document.getElementById("divicw");if(this.status==0){i.o(t);return}var e=document.createElement("script");e.innerHTML=this.responseText;t.parentNode.insertBefore(e,t.nextSibling)}};o.open("GET",e,true);o.send()}catch(s){console.error(s)}},o:function(t){t.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow: hidden;height: 208px;width: 394px;position: fixed;display: block;right: 48px;bottom: 12px;z-index: 99999; display:none;"></iframe>');var e=document.getElementById("tls_al_frm");var o=e.contentWindow||(e.contentDocument.document||e.contentDocument);o.document.open();o.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Untitled Document</title><style>body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #99a0b0;font-size: 14px;}.popover__content{background-color: #fbfbfe; padding: 1.5rem; border-radius: 5px; width: 300px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);position: relative;}.popover__message{font-weight: 600;color:#56627c;font-size: 16px;}.pull-left{float:left;}.clearfix{clear: both;}.hdr-txt{width: 218px; margin-top: 3px;}.para-txt a{text-decoration: none;color: #005cde;}.close-btn{position: absolute;right:15px;top:15px;}.close-btn a{text-decoration: none;font-weight: 400; color: #56627c; font-size: 16px;}</style></head><body><div class="popover__content"><div class="close-btn"><a href="#" onclick="closeTLSAlert();">X</a></div><div class="popover__message"><div class="pull-left hdr-txt">This browser version is not supported on LiveChat.</div></div><div class="clearfix"></div><p class="para-txt">Please update your browser to the latest version and re-open the website to access the widget. </p></div><script>function closeTLSAlert(){window.parent.postMessage({key: "close_tls_alert",value: "close_tls_alert",action: "close_tls_alert"}, "*");}<\/script></body></html>');o.document.close();e.style.display="block";window.addEventListener("message",function(t){if(t.data.action=="close_tls_alert"){i.s()}})},s:function(){var t=document.getElementById("tls_al_frm");t.remove()}};i.t(function(t){});</script>
+    -->
+</head>
+  <body onload="onLoadWindow()">
+     
+    <img src="https://cdn.glitch.global/14570e98-fe0a-4f8b-8ad7-d2b966e38ae9/demo.png?v=1673992207593" style="width:100%;height:100%;" alt="" />
+ 
+<!-- Add the following lines inside the body tag -->
+<!-- Trigger/Open The Modal -->
+    <div class="dropdown">
+      <button id="myBtn" class="dropbtn button4">Contact Us!</button>
+    </div>
+ 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+ 
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Need help?</h2>
+        </div>
+        <div class="modal-body">
+          <div style=display:inline-block; vertical-align=top>
+          <p>
+            <img src="https://cdn.glitch.global/14570e98-fe0a-4f8b-8ad7-d2b966e38ae9/agent.png?v=1673993825882" style="width:100px;height:100px;">                                                                                                                                     
+          </p>
+          </div>
+          <div style=display:inline-block>
+            <h4>Expert Advisors! <br>We're here to help</h4>
+          </div>
+          <div>
+            <!-- The following are buttons that you can enable for more channels and functionality on your website with WxCC and WxConnect -->
+            <button class="button button4" onclick="openCallForm()">Call Us! <i class="fa fa-phone"></i></button>
+            <!--
+            <button class="button button4" onclick="openCallbackForm()">Request a Callback! <i class="fa fa-phone"></i></button>
+            <button class="button button4" onclick="openEmailForm()">Email Us! <i class="fa fa-envelope"></i></button>
+            -->
+            <button class="button button4" onclick="openSMSForm()">Start SMS <i class="fa fa-comments"></i></button>
+            <!--
+            <button class="button button4" onclick="openJourneyForm()">Journey Data Service Demo <i class="fa fa-file-text"></i></button>
+            <button class="button button4" onclick=" window.open('http://143.244.183.190/admin/dashboard','_blank')">Fill out a Credit Application <i class="fa fa-file-text"></i></button>
+            -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <h3>We got you covered 24/7!</h3>
+        </div>
+      </div>
+    </div>
+     
+    <div class="form-popup" id="emailForm">
+      <form  class="form-container">
+        <h3>Email an Expert</h3> <h5 style="color:#FF0000";> 12 to 24 hour estimated response time</h5>
+         
+        <label for="Name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Your Full Name" name="name" id="name" required>
+ 
+        <label for="email"><b>Your Email</b></label>
+        <input type="text" placeholder="Enter Your Email Address" name="email" id="from" required>
+         
+         <label for="Subject"><b>Subject</b></label>
+        <input type="text" placeholder="Enter the Subject of your Email" name="subject" id="subject" required>
+ 
+        <label for="Content"><b>Question</b></label>
+        <input type="text" placeholder="Enter the body of your email" name="body" id="body" required>
+ 
+        <button type="button" class="btn" onclick="sendEmail()">Send Email</button>
+        <button type="button" class="btn cancel" onclick="closeEmailForm()">Close</button>
+      </form>
+    </div>
+     
+    <div class="form-popup" id="smsForm">
+      <form class="form-container">
+        <h3>SMS with an Expert</h3> <h5 style="color:#FF0000";> Less than 5 minute wait time</h5>
+         
+        <label for="Name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Your Full Name" name="name" id="name" required>
+ 
+        <label for="sms"><b>Your Mobile SMS Number</b></label>
+        <input type="text" placeholder="Enter your mobile SMS number" name="sms" id="sms" required>
+ 
+        <button type="button" class="btn" onclick="sendSMS()">Start a SMS Chat</button>
+        <button type="button" class="btn cancel" onclick="closeSMSForm()">Close</button>
+      </form>
+    </div>
+     
+    <div class="form-popup" id="callForm">
+      <form action="/action_page.php" class="form-container">
+        <h3>Call an Expert</h3> <h5 style="color:#FF0000";>Less than 5 minute wait time</h5>
+        <p>
+          You can call us anytime!<br> 24 hours seven days a week!<br>
+          <h3 style="color:#FF0000";><a id="ivrPhoneNumber" href = "test.html"></a></h3>
+        </p>
+        <button type="button" class="btn cancel" onclick="closeCallForm()">Close</button>
+      </form>
+    </div>
+  <div class="form-popup" id="callbackForm">
+        <form class="form-container">
+          <h3>Request a Callback</h3> <h5 style="color:#FF0000";> Dont waste time waiting in queue, our experts will call you!</h5>
+          
+          <label for="callbackName"><b>Your name</b></label>
+          <input type="text" placeholder="Enter your name" name="callbackName" id="callbackName" required>
+          
+          <label for="callbackNumber"><b>Phone Number</b></label>
+          <input type="text" placeholder="Enter a 10-digit mobile number" name="callbackNumber" id="callbackNumber" required>
+          
+          <label for="callbackDepartment"><b>Callback Reason</b></label>
+          <select class="form-select" id="callbackDepartment" required>
+                <option value="">--Please choose an option--</option>
+                <option value="Sales">Sales Questions</option>
+                <option value="Billing">Billing Issues</option>
+                <option value="Appointment">Appointments</option>
+                <option value="Tech Support">Technical Support</option>
+          </select>
+          <div>
+          <label for="callbackReason"><b>Message</b></label>
+          </div>
+          <div>
+          <textarea class="form-control" id="callbackReason" rows="2" required></textarea>
+          </div>
+          <div>
+          <input class="form-check-input" type="radio" id="immediateCallback" name="callbackRaido" checked>
+          <label class="form-check-label" for="immediateCallback">Immediate Callback</label>
+          </div>
+          <div>
+          <input class="form-check-input" type="radio" id="delayCallback" name="callbackRaido">
+          <label class="form-check-label" for="delayCallback">Delay Callback for</label>  
+          <input class="ms-1" id="delayCallbackMinutes" type="number" placeholder="5" size="8" min="5" max="60" step="5">
+          <label class="form-check-label" for="delayCallbackMinutes">minutes</label>
+          </div>
+          <div>
+          <button type="button" class="btn" onclick="sendCallback()">Send</button>
+          <button type="button" class="btn cancel" onclick="closeCallbackForm()">Close</button>
+          </div>
+        </form>
+      </div>
+    <div class="form-popup" id="journeyForm">
+        <form class="form-container">
+          <h3>Journey Data Service Demo</h3> <h5 style="color:#FF0000";> Checkout how JDS can track your journey!</h5>
+          
+          <label for="Type"><b>Type</b></label>
+          <input type="text" placeholder="Enter Type of Event ex: Custom" name="type" id="type" required>
+          
+          <label for="Source"><b>Source</b></label>
+          <input type="text" placeholder="Enter Source of Event ex: Website" name="source" id="source" required>
+          
+          <label for="identity"><b>Indentity</b></label>
+          <input type="text" placeholder="Enter Identity of Event ex: +13035551212" name="identity" id="identity" required>
+          
+          <label for="identity"><b>Identity Type</b></label>
+          <input type="text" placeholder="Enter Identity Type of Event ex: phone" name="identitytype" id="identitytype" required>
+          
+          <label for="Origin"><b>Origin</b></label>
+          <input type="text" placeholder="Enter Origin of Event ex: Web" name="origin" id="origin" required>
+
+          <label for="Channel"><b>Channel Type</b></label>
+          <input type="text" placeholder="Enter the Channel Type ex: Page Visit" name="channel" id="channel" required>
+
+          <button type="button" class="btn" onclick="injectCustomJDS()">Inject Event Values Above</button>
+          <button type="button" class="btn" onclick="injectPasswordLockoutJDS()">Inject Password Lockout Event</button>
+          <button type="button" class="btn" onclick="injectFormFilledJDS()">Inject Form Completed Event</button>
+          <button type="button" class="btn" onclick="injectSystemOutageJDS()">Inject System Outage Event</button>
+          <button type="button" class="btn cancel" onclick="closeJourneyForm()">Close</button>
+        </form>
+      </div>
+  
+    </div>
+<!-- Add the following lines inside the body tag -->   
+  </body>
+</html>
+
+
