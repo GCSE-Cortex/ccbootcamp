@@ -1,0 +1,319 @@
+{
+    "version": "0.0.7",
+    "appTitle": "Contact Center Desktop",
+    "logo": "",
+    "dragDropEnabled": false,
+    "notificationTimer": 8,
+    "maximumNotificationCount": 3,
+    "browserNotificationTimer": 8,
+    "wxmConfigured": false,
+    "desktopChatApp": {
+        "webexConfigured": false
+    },
+    "area": {
+        "advancedHeader": [
+            {
+                "comp": "agentx-webex"
+            },
+            {
+                "comp": "agentx-outdial"
+            },
+            {
+                "comp": "agentx-notification"
+            },
+            {
+                "comp": "agentx-state-selector"
+            }
+        ],
+        "headless": {
+            "id": "dw-headless",
+            "widgets": {
+                "comp1": {
+                    "comp": "div"
+                }
+            },
+            "layout": {
+                "areas": [
+                    [
+                        "comp1"
+                    ]
+                ],
+                "size": {
+                    "cols": [
+                        1
+                    ],
+                    "rows": [
+                        1
+                    ]
+                }
+            }
+        },
+        "panel": {
+            "comp": "md-tabs",
+            "attributes": {
+                "class": "widget-tabs"
+            },
+            "children": [
+                {
+                    "comp": "md-tab",
+                    "attributes": {
+                        "slot": "tab",
+                        "class": "widget-pane-tab"
+                    },
+                    "children": [
+                        {
+                            "comp": "slot",
+                            "attributes": {
+                                "name": "IVR_TRANSCRIPT_TAB"
+                            }
+                        }
+                    ],
+                    "visibility": "IVR_TRANSCRIPT"
+                },
+                {
+                    "comp": "md-tab-panel",
+                    "attributes": {
+                        "slot": "panel",
+                        "class": "widget-pane"
+                    },
+                    "children": [
+                        {
+                            "comp": "slot",
+                            "attributes": {
+                                "name": "IVR_TRANSCRIPT"
+                            }
+                        }
+                    ],
+                    "visibility": "IVR_TRANSCRIPT"
+                },
+                {
+                    "comp": "md-tab",
+                    "attributes": {
+                        "slot": "tab"
+                    },
+                    "children": [
+                        {
+                            "comp": "slot",
+                            "attributes": {
+                                "name": "WXM_JOURNEY_TAB"
+                            }
+                        }
+                    ],
+                    "visibility": "WXM_JOURNEY"
+                },
+                {
+                    "comp": "md-tab",
+                    "attributes": { "slot": "tab", "class": "widget-pane-tab" },
+                    "children": [{ "comp": "span", "textContent": "Customer Journey" }]
+                  },
+                  { 
+                    "comp": "md-tab-panel", 
+                    "attributes": { "slot": "panel", "class": "widget-pane" }, 
+                    "children": [ 
+                    { 
+                      "comp": "customer-journey-widget", 
+                      "script": "https://cjaas.cisco.com/widgets/customer-journey-8.0.7.js", 
+                      "attributes": { 
+                        "tape-read-token": "so=95fd53c8-c0e0-483f-bade-2af87de75321&sn=CCBOOTCAMP&ss=tape&sp=rw&se=2033-01-28T18:30:44.609Z&sk=CCBOOTCAMPAPP&sig=HaZ1VAv5V9YjnOjwBks1QletA6YL%2F97UV%2BrwkrzUepM%3F", 
+                        "profile-read-token": "so=95fd53c8-c0e0-483f-bade-2af87de75321&sn=CCBOOTCAMP&ss=profile&sp=rw&se=2033-01-28T18:30:44.562Z&sk=CCBOOTCAMPAPP&sig=9Tn5mr6pk0U4hOnaC5zCMeXVJRjKaAxAj4IuoTeZ%2BwQ%3F", 
+                        "profile-write-token": "so=95fd53c8-c0e0-483f-bade-2af87de75321&sn=CCBOOTCAMP&ss=profile&sp=rw&se=2033-01-28T18:30:44.562Z&sk=CCBOOTCAMPAPP&sig=9Tn5mr6pk0U4hOnaC5zCMeXVJRjKaAxAj4IuoTeZ%2BwQ%3F", 
+                        "stream-read-token": "so=95fd53c8-c0e0-483f-bade-2af87de75321&sn=CCBOOTCAMP&ss=stream&sp=rw&se=2033-01-28T18:30:44.586Z&sk=CCBOOTCAMPAPP&sig=QCynmWSod1JQFSwiaVUaVTsQ75v45O8Ub9ytmFeuGC0%3F", 
+                        "base-url": "https://jds-us1.cjaas.cisco.com", 
+                        "identity-read-token": "so=95fd53c8-c0e0-483f-bade-2af87de75321&sn=CCBOOTCAMP&ss=idmt&sp=rw&se=2033-01-28T18:30:44.538Z&sk=CCBOOTCAMPAPP&sig=4idEjxiCRoNqeypSPHlZaLgme5P1MKh6eS9d35AgqZQ%3F", 
+                        "identity-write-token": "so=95fd53c8-c0e0-483f-bade-2af87de75321&sn=CCBOOTCAMP&ss=idmt&sp=rw&se=2033-01-28T18:30:44.538Z&sk=CCBOOTCAMPAPP&sig=4idEjxiCRoNqeypSPHlZaLgme5P1MKh6eS9d35AgqZQ%3F", 
+                        "user-search": "true",
+                        "icon-data-path": "https://wxcc-widgets.s3.us-west-1.amazonaws.com/icons.json",
+                        "logs-on": "true",
+                        "ignore-undefined-origins": "true" 
+                      }, 
+                      "properties": { 
+                        "interactionData": "$STORE.agentContact.taskSelected"
+                      }, 
+                      "wrapper": { 
+                        "title": "Customer Journey Widget", 
+                        "maximizeAreaName": "app-maximize-area" 
+                      } 
+                    }
+                    ]
+                  },
+                {
+                    "comp": "md-tab-panel",
+                    "attributes": {
+                        "slot": "panel",
+                        "class": "widget-pane"
+                    },
+                    "children": [
+                        {
+                            "comp": "agentx-wc-cloudcherry-widget",
+                            "properties": {
+                                "userModel": "$STORE.app.userModel",
+                                "spaceId": "",
+                                "metricsId": "",
+                                "teamId": "$STORE.agent.teamName",
+                                "ani": "$STORE.agentContact.taskSelected.ani",
+                                "isDarkMode": "$STORE.app.darkMode"
+                            },
+                            "wrapper": {
+                                "title": "Customer Experience Journey",
+                                "maximizeAreaName": "app-maximize-area"
+                            }
+                        }
+                    ],
+                    "visibility": "WXM_JOURNEY"
+                },
+                {
+                    "comp": "md-tab",
+                    "attributes": {
+                        "slot": "tab",
+                        "class": "widget-pane-tab"
+                    },
+                    "children": [
+                        {
+                            "comp": "slot",
+                            "attributes": {
+                                "name": "CONTACT_HISTORY_TAB"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "comp": "md-tab-panel",
+                    "attributes": {
+                        "slot": "panel",
+                        "class": "widget-pane"
+                    },
+                    "children": [
+                        {
+                            "comp": "slot",
+                            "attributes": {
+                                "name": "CONTACT_HISTORY"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "comp": "md-tab",
+                    "attributes": {
+                        "slot": "tab",
+                        "class": "widget-pane-tab"
+                    },
+                    "children": [
+                        {
+                            "comp": "slot",
+                            "attributes": {
+                                "name": "SCREEN_POP_TAB"
+                            }
+                        }
+                    ],
+                    "visibility": "SCREEN_POP"
+                },
+                {
+                    "comp": "md-tab-panel",
+                    "attributes": {
+                        "slot": "panel",
+                        "class": "widget-pane"
+                    },
+                    "children": [
+                        {
+                            "comp": "slot",
+                            "attributes": {
+                                "name": "SCREEN_POP"
+                            }
+                        }
+                    ],
+                    "visibility": "SCREEN_POP"
+                }
+            ]
+        },
+        "navigation": [
+            {
+                "nav": {
+                    "label": "Customer Experience Analytics",
+                    "icon": "/app/images/wxm.bcd45cc3.svg",
+                    "iconType": "other",
+                    "navigateTo": "wxm-metrics",
+                    "align": "top"
+                },
+                "page": {
+                    "id": "wxm-metrics",
+                    "widgets": {
+                        "comp1": {
+                            "comp": "agentx-wc-cloudcherry-widget",
+                            "attributes": {
+                                "metrics": true
+                            },
+                            "properties": {
+                                "userModel": "$STORE.app.userModel",
+                                "spaceId": "",
+                                "metricsId": "",
+                                "teamId": "$STORE.agent.teamName",
+                                "isDarkMode": "$STORE.app.darkMode"
+                            }
+                        }
+                    },
+                    "layout": {
+                        "areas": [
+                            [
+                                "comp1"
+                            ]
+                        ],
+                        "size": {
+                            "cols": [
+                                1
+                            ],
+                            "rows": [
+                                1
+                            ]
+                        }
+                    }
+                },
+                "visibility": "WXM_METRICS"
+            },
+            {
+                "nav": {
+                  "label": "JDS System Widget",
+                  "icon": "/app/images/wxm.bcd45cc3.svg",
+                  "iconType": "other",
+                  "navigateTo": "CustomNav6",
+                  "align": "top"
+                },
+                "page": {
+                  "id": "customNav6",
+                  "widgets": {
+                    "right": {
+                        "comp": "customer-journey-widget", 
+                        "script": "https://cjaas.cisco.com/widgets/customer-journey-8.0.7.js", 
+                        "attributes": { 
+                            "tape-read-token": "so=95fd53c8-c0e0-483f-bade-2af87de75321&sn=CCBOOTCAMP&ss=tape&sp=rw&se=2033-01-28T18:30:44.609Z&sk=CCBOOTCAMPAPP&sig=HaZ1VAv5V9YjnOjwBks1QletA6YL%2F97UV%2BrwkrzUepM%3f", 
+                            "profile-read-token": "so=95fd53c8-c0e0-483f-bade-2af87de75321&sn=CCBOOTCAMP&ss=profile&sp=rw&se=2033-01-28T18:30:44.562Z&sk=CCBOOTCAMPAPP&sig=9Tn5mr6pk0U4hOnaC5zCMeXVJRjKaAxAj4IuoTeZ%2BwQ%3f", 
+                            "profile-write-token": "so=95fd53c8-c0e0-483f-bade-2af87de75321&sn=CCBOOTCAMP&ss=profile&sp=rw&se=2033-01-28T18:30:44.562Z&sk=CCBOOTCAMPAPP&sig=9Tn5mr6pk0U4hOnaC5zCMeXVJRjKaAxAj4IuoTeZ%2BwQ%3f", 
+                            "stream-read-token": "so=95fd53c8-c0e0-483f-bade-2af87de75321&sn=CCBOOTCAMP&ss=stream&sp=rw&se=2033-01-28T18:30:44.586Z&sk=CCBOOTCAMPAPP&sig=QCynmWSod1JQFSwiaVUaVTsQ75v45O8Ub9ytmFeuGC0%3f", 
+                            "base-url": "https://jds-us1.cjaas.cisco.com", 
+                            "identity-read-token": "so=95fd53c8-c0e0-483f-bade-2af87de75321&sn=CCBOOTCAMP&ss=idmt&sp=rw&se=2033-01-28T18:30:44.538Z&sk=CCBOOTCAMPAPP&sig=4idEjxiCRoNqeypSPHlZaLgme5P1MKh6eS9d35AgqZQ%3f", 
+                            "identity-write-token": "so=95fd53c8-c0e0-483f-bade-2af87de75321&sn=CCBOOTCAMP&ss=idmt&sp=rw&se=2033-01-28T18:30:44.538Z&sk=CCBOOTCAMPAPP&sig=4idEjxiCRoNqeypSPHlZaLgme5P1MKh6eS9d35AgqZQ%3f", 
+                          "user-search": "true",
+                          "icon-data-path": "https://wxcc-widgets.s3.us-west-1.amazonaws.com/icons.json",
+                          "logs-on": "true",
+                          "ignore-undefined-origins": "true" 
+                        }, 
+                        "properties": { 
+                          "interactionData": "$STORE.agentContact.taskSelected"
+                        }, 
+                        "wrapper": { 
+                          "title": "Customer Journey Widget", 
+                          "maximizeAreaName": "app-maximize-area" 
+                        } 
+                    }
+                  },
+                  "layout": {
+                    "areas": [["right"]],
+                    "size": {
+                      "cols": [1],
+                      "rows": [1]
+                    }
+                  }
+                }
+              }
+        ]
+    }
+}
