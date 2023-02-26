@@ -8,7 +8,7 @@
     "browserNotificationTimer": 8,
     "wxmConfigured": false,
     "desktopChatApp": {
-        "webexConfigured": false
+        "webexConfigured": true
     },
     "area": {
         "advancedHeader": [
