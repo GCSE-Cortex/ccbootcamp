@@ -389,7 +389,10 @@
                   "pageTitle": "$STORE.page.getDefaultPageTitle"
                 }
               }
-            ]
+            ],
+            "attributes": {
+              "style": "margin: 16px 0px 16px 16px"
+            }
           },
           "useFlexLayout": true,
           "pageSubHeader": {
@@ -490,8 +493,8 @@
           "widgets": {
             "comp1": {
               "comp": "analyzer-widget",
-              "width": 25,
-              "height": 25,
+              "width": 3,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -504,8 +507,8 @@
             },
             "comp2": {
               "comp": "analyzer-widget",
-              "width": 25,
-              "height": 25,
+              "width": 3,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -518,8 +521,8 @@
             },
             "comp3": {
               "comp": "analyzer-widget",
-              "width": 25,
-              "height": 25,
+              "width": 3,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -532,8 +535,8 @@
             },
             "comp4": {
               "comp": "analyzer-widget",
-              "width": 25,
-              "height": 25,
+              "width": 3,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -546,8 +549,8 @@
             },
             "comp5": {
               "comp": "analyzer-widget",
-              "width": 33,
-              "height": 30,
+              "width": 4,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -560,8 +563,8 @@
             },
             "comp6": {
               "comp": "analyzer-widget",
-              "width": 33,
-              "height": 30,
+              "width": 4,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -574,8 +577,8 @@
             },
             "comp7": {
               "comp": "analyzer-widget",
-              "width": 34,
-              "height": 30,
+              "width": 4,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -588,8 +591,8 @@
             },
             "comp8": {
               "comp": "analyzer-widget",
-              "width": 50,
-              "height": 40,
+              "width": 6,
+              "height": 7,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -602,8 +605,8 @@
             },
             "comp9": {
               "comp": "analyzer-widget",
-              "width": 50,
-              "height": 40,
+              "width": 6,
+              "height": 7,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -667,8 +670,8 @@
             "widgets": {
               "comp1": {
                 "comp": "agentx-wc-team-performance-widget",
-                "width": 100,
-                "height": 100,
+                "width": 12,
+                "height": 19,
                 "wrapper": {
                   "title": "$I18N.tpw.wrapperTitle",
                   "id": "tpw-1",
@@ -875,7 +878,7 @@
               }
             ],
             "attributes": {
-              "style": "margin: 0px 0px 0px 16px"
+              "style": "margin: 16px 0px 16px 16px"
             }
           },
           "pageSubHeader": {
@@ -976,8 +979,8 @@
           "widgets": {
             "comp1": {
               "comp": "analyzer-widget",
-              "width": 25,
-              "height": 25,
+              "width": 3,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -990,8 +993,8 @@
             },
             "comp2": {
               "comp": "analyzer-widget",
-              "width": 25,
-              "height": 25,
+              "width": 3,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -1004,8 +1007,8 @@
             },
             "comp3": {
               "comp": "analyzer-widget",
-              "width": 25,
-              "height": 25,
+              "width": 3,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -1018,8 +1021,8 @@
             },
             "comp4": {
               "comp": "analyzer-widget",
-              "width": 25,
-              "height": 25,
+              "width": 3,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -1032,8 +1035,8 @@
             },
             "comp5": {
               "comp": "analyzer-widget",
-              "width": 33,
-              "height": 30,
+              "width": 4,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -1046,8 +1049,8 @@
             },
             "comp6": {
               "comp": "analyzer-widget",
-              "width": 33,
-              "height": 30,
+              "width": 4,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -1060,8 +1063,8 @@
             },
             "comp7": {
               "comp": "analyzer-widget",
-              "width": 34,
-              "height": 30,
+              "width": 4,
+              "height": 5,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -1074,8 +1077,8 @@
             },
             "comp8": {
               "comp": "analyzer-widget",
-              "width": 50,
-              "height": 40,
+              "width": 6,
+              "height": 7,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -1088,8 +1091,8 @@
             },
             "comp9": {
               "comp": "analyzer-widget",
-              "width": 50,
-              "height": 40,
+              "width": 6,
+              "height": 7,
               "attributes": {
                 "is-dark-mode": "$STORE.app.darkMode",
                 "filter": "$STORE.agent.analyzerInteractionFilter",
@@ -1153,8 +1156,8 @@
             "widgets": {
               "comp1": {
                 "comp": "agentx-wc-team-performance-widget",
-                "width": 100,
-                "height": 100,
+                "width": 12,
+                "height": 19,
                 "wrapper": {
                   "title": "$I18N.tpw.wrapperTitle",
                   "id": "tpw-1",
