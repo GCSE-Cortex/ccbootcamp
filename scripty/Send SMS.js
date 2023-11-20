@@ -183,7 +183,7 @@ function sendSMS() {
     });
 
 async function sendSMSMessage(name,number) {
-const response = await fetch(sendSMSWelcomeWebhook, {
+const response = await fetch(IMI_SMS_WEBHOOK, {
     method: 'POST',
     body:JSON.stringify( 
     {
