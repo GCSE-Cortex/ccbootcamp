@@ -1,3 +1,9 @@
+//Set these vars to show or hide the channels you want to demo
+const showCallUs = true;
+const showCallBack = true;
+const showEmail = true;
+const showSMS = true;
+const showWhatsApp = true;
 //This is your IMI WIDGET GUID
 const MyChatWidgetGUID = "b2dfd305-ac8c-11ed-89a4-06b1006a3469";
 //This is your voice WxCC IVR phone number

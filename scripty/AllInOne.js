@@ -19,11 +19,140 @@
     btn.dataset.bsToggle="offcanvas";
     btn.dataset.bsTarget="#contactMenu";
     document.body.append(btn);
-  
+  /*
       //Lets build the Offcanvas
     let offCanvasContainerDiv = document.createElement("div");
     offCanvasContainerDiv.innerHTML = createOffcanvasContent();
     document.body.append(offCanvasContainerDiv);
+  */
+  //JS code to build all the HTML code for the OffCanvas menu so we can control it via booleans
+    let containerOffcanvas = document.createElement("div");
+    containerOffcanvas.classList.add("offcanvas");
+    containerOffcanvas.classList.add("offcanvas-end");
+    containerOffcanvas.classList.add("rounded-start");
+    containerOffcanvas.tabindex="-1";
+    containerOffcanvas.id="contactMenu";
+    document.body.append(containerOffcanvas);
+  
+    let bodyOffcanvas = document.createElement("div");
+  	bodyOffcanvas.classList.add("offcanvas-body");
+    containerOffcanvas.appendChild(bodyOffcanvas);
+ 
+    let listGroupOffcanvas = document.createElement("div");
+  	listGroupOffcanvas.classList.add("list-group");
+    listGroupOffcanvas.classList.add("list-group-flush");
+    bodyOffcanvas.appendChild(listGroupOffcanvas);
+  
+    let listGroupItemOffcanvas = document.createElement("div");
+  	listGroupItemOffcanvas.classList.add("list-group-item");
+    listGroupOffcanvas.appendChild(listGroupItemOffcanvas);
+  
+    let listGroupItemFlexOffcanvas = document.createElement("div");
+  	listGroupItemFlexOffcanvas.classList.add("d-flex");
+    listGroupItemFlexOffcanvas.classList.add("w-100");
+    listGroupItemFlexOffcanvas.classList.add("justify-content-between");
+    listGroupItemOffcanvas.appendChild(listGroupItemFlexOffcanvas);
+ 
+    let listGroupItemFlexContentOffcanvas = document.createElement("h1");
+  	listGroupItemFlexContentOffcanvas.classList.add("display-6");
+    listGroupItemFlexContentOffcanvas.textContent="Need help?";
+    listGroupItemFlexOffcanvas.appendChild(listGroupItemFlexContentOffcanvas);
+    //Close Button for OffCanvas menu
+    let closeBtn = document.createElement("button");
+    closeBtn.classList.add("btn-close");
+    closeBtn.classList.add("mt-3");
+    closeBtn.type="button";
+    closeBtn.dataset.bsDismiss="offcanvas";
+    listGroupItemFlexOffcanvas.appendChild(closeBtn);
+
+    listGroupItemOffcanvas = document.createElement("div");
+  	listGroupItemOffcanvas.classList.add("list-group-item");
+    listGroupOffcanvas.appendChild(listGroupItemOffcanvas);
+  
+    listGroupItemFlexOffcanvas = document.createElement("div");
+  	listGroupItemFlexOffcanvas.classList.add("d-flex");
+    listGroupItemFlexOffcanvas.classList.add("w-100");
+    listGroupItemFlexOffcanvas.classList.add("justify-content-between");
+    listGroupItemOffcanvas.appendChild(listGroupItemFlexOffcanvas);
+ 
+    //ADD AGENT IMAGE LATER here!
+    
+    listGroupItemFlexContentOffcanvas = document.createElement("img");
+  	listGroupItemFlexContentOffcanvas.classList.add("me-4");
+    listGroupItemFlexContentOffcanvas.id="agent";
+    listGroupItemFlexContentOffcanvas.width="112";
+    listGroupItemFlexContentOffcanvas.height="112";
+    listGroupItemFlexOffcanvas.appendChild(listGroupItemFlexContentOffcanvas);
+    
+  //Expert Advisor text
+    let listGroupItemFlexContentParagraphOffcanvas = document.createElement("div");
+  	listGroupItemFlexContentParagraphOffcanvas.classList.add("vstsack");
+    listGroupItemFlexContentParagraphOffcanvas.classList.add("align-self-center");
+    listGroupItemFlexContentParagraphOffcanvas.classList.add("fs-4");
+    listGroupItemFlexContentParagraphOffcanvas.classList.add("lh-1");
+    listGroupItemFlexOffcanvas.appendChild(listGroupItemFlexContentParagraphOffcanvas);
+    let expertAdvisorParagraph = document.createElement("p");
+    expertAdvisorParagraph.textContent="Expert Advisor";
+    listGroupItemFlexContentParagraphOffcanvas.appendChild(expertAdvisorParagraph);
+    expertAdvisorParagraph = document.createElement("p");
+    expertAdvisorParagraph.textContent="We are here to help!";
+    listGroupItemFlexContentParagraphOffcanvas.appendChild(expertAdvisorParagraph);
+    
+  if(showCallUs) {
+      //Call Us Link for Call Us Modal launch
+      let listGroupItemFlexContentCallUsOffcanvas = document.createElement("href");
+      listGroupItemFlexContentCallUsOffcanvas.href ="#";
+      listGroupItemFlexContentCallUsOffcanvas.id ="callLink";
+      listGroupItemFlexContentCallUsOffcanvas.bsToggle="modal";
+      listGroupItemFlexContentCallUsOffcanvas.dataset.bsTarget="#callModal";
+      listGroupItemFlexContentCallUsOffcanvas.classList.add("list-group-item");
+      listGroupItemFlexContentCallUsOffcanvas.classList.add("list-group-item-action");
+      listGroupItemOffcanvas.appendChild(listGroupItemFlexContentCallUsOffcanvas);
+      let callUsDiv = document.createElement("div");
+      callUsDiv.classList.add("d-flex");
+      callUsDiv.classList.add("w-100");
+      callUsDiv.classList.add("justify-content-between");
+      listGroupItemFlexContentCallUsOffcanvas.appendChild(callUsDiv);
+      let callUsH5 = document.createElement("h5");
+      callUsH5.classList.add("mb-1");
+      callUsH5.textContent="Call Us - ";
+      callUsDiv.appendChild(callUsH5);
+      let callUsH5Span = document.createElement("span");
+      callUsH5Span.classList.add("h6");
+      callUsH5Span.classList.add("text-primary");
+      callUsH5Span.textContent="8 min wait time";
+      callUsH5.appendChild(callUsH5Span);
+      let callUsParagraph = document.createElement("p");
+      callUsParagraph.textContent="Talk to an expert now";
+      listGroupItemFlexContentCallUsOffcanvas.appendChild(callUsParagraph);
+    }
+   //Lets build the Callback Channel Link
+  if(showCallBack) 
+    createOffCanvasChannelLink(listGroupItemOffcanvas,
+                               "callbackLink","Callback - ",
+                               "8 min wait time",
+                               "Don't wait in queue, we will call you");
+   
+   //Lets build the Email Channel Link
+  if(showEmail) 
+    createOffCanvasChannelLink(listGroupItemOffcanvas,
+                               "emailLink","Email Us - ",
+                               "12-24 hour wait",
+                               "An expert will respond to your email");
+  //Lets build the SMS Channel Link
+  if(showSMS) 
+    createOffCanvasChannelLink(listGroupItemOffcanvas,
+                               "smsLink",
+                               "SMS an Expert - ",
+                               "2 minute wait time",
+                               "Text message with an expert");
+   //Lets build the WhatsApp Channel Link
+  if(showWhatsApp) 
+    createOffCanvasChannelLink(listGroupItemOffcanvas,
+                               "whatsappLink",
+                               "WhatsApp - ",
+                               "2 minute wait time",
+                               "WhatsApp with an expert");
   
     //Lets build Call us Modal
     let callUsContainerDiv = document.createElement("div");
@@ -143,37 +272,43 @@ function bsToggle(bsComponent) {
    bsComponent.toggle();
 }
 
-  // Add Event Listeners for Contact Menu Items
-  document.getElementById('callLink').addEventListener('click', function () {  
-      bsToggle(bsCallModal);
-      bsToggle(bsContactMenu);
-  });
+  if(showCallUs) {
+    // Add Event Listeners for Contact Menu Items
+    document.getElementById('callLink').addEventListener('click', function () {  
+        bsToggle(bsCallModal);
+        bsToggle(bsContactMenu);
+    });
+  }
+  if(showCallBack) {
+    document.getElementById('callbackLink').addEventListener('click', function () {
+        bsToggle(bsCallbackModal);
+        bsToggle(bsContactMenu);
+    });
+  }
+  if(showEmail) {
+    document.getElementById('emailLink').addEventListener('click', function () {
+        bsToggle(bsEmailModal);
+        bsToggle(bsContactMenu);
+    });
+  }
+  if(showSMS) {
+    document.getElementById('smsLink').addEventListener('click', function () {
+        bsToggle(bsSmsModal);
+        bsToggle(bsContactMenu);
+    });
+  }
+  if(showWhatsApp) {
+    document.getElementById('whatsappLink').addEventListener('click', function () {
+        bsToggle(bsWhatsappModal);
+        bsToggle(bsContactMenu);
 
-  document.getElementById('callbackLink').addEventListener('click', function () {
-      bsToggle(bsCallbackModal);
-      bsToggle(bsContactMenu);
-  });
-
-  document.getElementById('emailLink').addEventListener('click', function () {
-      bsToggle(bsEmailModal);
-      bsToggle(bsContactMenu);
-  });
-
-  document.getElementById('smsLink').addEventListener('click', function () {
-      bsToggle(bsSmsModal);
-      bsToggle(bsContactMenu);
-  });
-
-  document.getElementById('whatsappLink').addEventListener('click', function () {
-      bsToggle(bsWhatsappModal);
-      bsToggle(bsContactMenu);
-
-      if(UserIdentified == true){
-          updateJDS(UserIdentity,"whatsapp-request")
-      } else {
-          updateJDS(UserIdentity,"whatsapp-request")
-      }
-  });
+        if(UserIdentified == true){
+            updateJDS(UserIdentity,"whatsapp-request")
+        } else {
+            updateJDS(UserIdentity,"whatsapp-request")
+        }
+    });
+  }
 
   // Hide imi when the Contact Menu is open
   document.getElementById('contactMenu').addEventListener('shown.bs.offcanvas', () => {
@@ -260,6 +395,32 @@ document.getElementById('sendCallbackBtn').addEventListener('click', () => {
 //-----------------------------------------//
 // Dont change anything below this line
 //-----------------------------------------//
+  
+function createOffCanvasChannelLink(parentElement,link_s,channel_s,wait_s,help_s) {
+	let listGroupItemFlexContentOffcanvas = document.createElement("href");
+    listGroupItemFlexContentOffcanvas.href ="#";
+    listGroupItemFlexContentOffcanvas.id =link_s;
+    listGroupItemFlexContentOffcanvas.classList.add("list-group-item");
+    listGroupItemFlexContentOffcanvas.classList.add("list-group-item-action");
+    parentElement.appendChild(listGroupItemFlexContentOffcanvas);
+    let Div = document.createElement("div");
+    Div.classList.add("d-flex");
+    Div.classList.add("w-100");
+    Div.classList.add("justify-content-between");
+    listGroupItemFlexContentOffcanvas.appendChild(Div);
+    let H5 = document.createElement("h5");
+    H5.classList.add("mb-1");
+    H5.textContent=channel_s;
+    Div.appendChild(H5);
+    let H5Span = document.createElement("span");
+    H5Span.classList.add("h6");
+    H5Span.classList.add("text-primary");
+    H5Span.textContent=wait_s;
+    H5.appendChild(H5Span);
+    let Paragraph = document.createElement("p");
+    Paragraph.textContent=help_s;
+    listGroupItemFlexContentOffcanvas.appendChild(Paragraph);
+}
   
 async function getToken() {
     try {
@@ -549,78 +710,6 @@ async function sendSMS() {
 }
   
 })();
-
-
-
-
-function createOffcanvasContent(){
-  return `<div class="offcanvas offcanvas-end rounded-start" tabindex="-1" id="contactMenu">
-    <div class="offcanvas-body">
-      <div class="list-group list-group-flush">
-        <!-- Offcanvas Header -->
-        <div class="list-group-item">
-          <div class="d-flex w-100 justify-content-between">
-            <h1 class="display-6">Need Help?</h1>
-            <button type="button" class="btn-close mt-3" data-bs-dismiss="offcanvas"></button>
-          </div>
-        </div>
-
-        <!-- Offcanvas Expert Advisor -->
-        <div class="list-group-item">
-          <div class="d-flex w-100 justify-content-between">
-            <img id="agent" class="me-4" width="112" height="112" />
-            <div class="vstack align-self-center fs-4 lh-1">
-              <p>Expert Advisor</p>
-              <p>We're here to help</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Offcanvas Call Us -->
-        <a href="#" id="callLink" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Call Us - <span class="h6 text-primary">8 min wait time</span></h5>
-          </div>
-          <p class="mb-1 text-muted">Talk with an expert now</p>
-        </a>
-
-        <!-- Offcanvas Callback -->
-        <a href="#" id="callbackLink" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Callback - <span class="h6 text-primary">8 minute wait time</span></h5>
-          </div>
-          <p class="mb-1 text-muted">Don't wait in queue, we will call you</p>
-        </a>
-
-        <!-- Offcanvas Email an Expert -->
-        <a href="#" id="emailLink" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Email an Expert - <span class="h6 text-primary">12-24 hour wait time</span></h5>
-          </div>
-          <p class="mb-1 text-muted">An expert will respond to your email</p>
-        </a>
-
-        <!-- Offcanvas Start SMS -->
-        <a href="#" id="smsLink" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">SMS an Expert - <span class="h6 text-primary">2 minute wait time</span></h5>
-          </div>
-          <p class="mb-1 text-muted">Text message with an expert</p>
-        </a>
-
-        <!-- Offcanvas Start WhatsApp -->
-        <a href="#" id="whatsappLink" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">WhatsApp - <span class="h6 text-primary">2 minute wait time</span></h5>
-          </div>
-          <p class="mb-1 text-muted">WhatsApp message with an expert</p>
-        </a>
-
-      </div>
-    </div>
-  </div>
-  <!-- End OffCanvas -->`;
-}
 
 
 function createCallModalContent(){
