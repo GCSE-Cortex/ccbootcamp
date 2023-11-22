@@ -70,7 +70,7 @@
     listGroupItemFlexOffcanvas.classList.add("justify-content-between");
     listGroupItemOffcanvas.appendChild(listGroupItemFlexOffcanvas);
  
-    //ADD AGENT IMAGE LATER here!
+   //Add Agent image
     
     listGroupItemFlexContentOffcanvas = document.createElement("img");
   	listGroupItemFlexContentOffcanvas.classList.add("me-4");
