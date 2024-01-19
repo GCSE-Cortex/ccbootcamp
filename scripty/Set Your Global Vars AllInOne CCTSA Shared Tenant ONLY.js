@@ -14,6 +14,7 @@ const IMI_SMS_WEBHOOK = "https://hooks.us.webexconnect.io/events/TBUY8ARMO6";
 const IMI_CALLBACK_WEBHOOK = "https://hooks.us.webexconnect.io/events/6UOEYABH3W";
 //Put your user name, their email address and phone number here, hard coded for JDS events etc.
 //These are used for JDS functions
+const TOKEN_SERVICE_USERID = "YOUR USERID";
 const TOKEN_SERVICE_URL = "https://us-central1-gcp-ruegreen-nprd-41696.cloudfunctions.net/token-service?name=JDS";
 const TOKEN_SERVICE_PASSPHRASE = "mypassword";
 const JDS_PROJECTID = "64b55afb6d82725e4ec46d8b";
