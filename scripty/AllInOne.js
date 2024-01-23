@@ -674,7 +674,7 @@ async function sendSMS() {
       method: 'POST',
       body: JSON.stringify({
         name: smsName.value,
-        number: smsNumber.value,
+        number: 1+smsNumber.value,
         balance: balance,
         link: myLink,
         WelcomeMessage:welcomeMessage
