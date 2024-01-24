@@ -119,9 +119,9 @@
                         "attributes": {
                           "base-url": "https://api-jds.prod-useast1.ciscowxdap.com",
                           "logs-on": "true",
-                          "project-id": "$STORE.agent.orgId",
+                          "project-id": "Your JDS Project ID",
                           "template-id": "journey-default-template",
-                          "icon-data-path": "https://wxcc-widgets.s3.us-west-1.amazonaws.com/icons.json",
+                          "icon-data-path": "Your ICON file path",
                           "limit": "50",
                           "time-frame": "All",
                           "live-stream": "true"
@@ -129,7 +129,7 @@
                         "properties": {
                           "interactionData": "$STORE.agentContact.taskSelected",
                           "bearerToken": "$STORE.auth.accessToken",
-                          "organizationId": "$STORE.agentContact.taskSelected.orgId"
+                          "organizationId": "$STORE.agent.orgId"
                         },
                         "wrapper": {
                           "title": "Customer Journey Widget",
@@ -288,9 +288,9 @@
                         "attributes": {
                           "base-url": "https://api-jds.prod-useast1.ciscowxdap.com",
                           "logs-on": "true",
-                          "project-id": "$STORE.agent.orgId",
+                          "project-id":"Your JDS Project ID",
                           "template-id": "journey-default-template",
-                          "icon-data-path": "https://wxcc-widgets.s3.us-west-1.amazonaws.com/icons.json",
+                          "icon-data-path": "Your ICON files path",
                           "limit": "50",
                           "time-frame": "All",
                           "live-stream": "true"
@@ -298,7 +298,7 @@
                         "properties": {
                           "interactionData": "$STORE.agentContact.taskSelected",
                           "bearerToken": "$STORE.auth.accessToken",
-                          "organizationId": "2572a6d8-b3f7-43a5-9550-7223250c4f5d"
+                          "organizationId": "$STORE.agent.orgId"
                         },
                         "wrapper": {
                           "title": "Customer Journey Widget",
