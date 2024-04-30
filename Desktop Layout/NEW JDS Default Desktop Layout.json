@@ -117,13 +117,11 @@
                         "comp": "customer-journey-widget",
                         "script": "https://cjaas.cisco.com/widgets/customer-journey-10.0.0/index.js",
                         "attributes": {
-                            "project-id": "Your JDS Project ID",
                             "icon-data-url": "Your ICON file path",
                             "limit": "50",
                             "time-frame": "All",
                             "show-alias-icon": "true",
-                            "live-stream": "true",
-                            "condensed-view": "true"
+                            "live-stream": "true"
                         },
                         "properties": {
                             "interactionData": "$STORE.agentContact.taskSelected",
@@ -286,13 +284,11 @@
                         "comp": "customer-journey-widget",
                         "script": "https://cjaas.cisco.com/widgets/customer-journey-10.0.0/index.js",
                         "attributes": {
-                            "project-id": "Your JDS Project ID",
                             "icon-data-url": "Your ICON file path",
                             "limit": "50",
                             "time-frame": "All",
                             "show-alias-icon": "true",
                             "live-stream": "true",
-                            "condensed-view": "true"
                         },
                         "properties": {
                             "interactionData": "$STORE.agentContact.taskSelected",
