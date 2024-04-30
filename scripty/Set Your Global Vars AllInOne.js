@@ -18,7 +18,7 @@ const TOKEN_SERVICE_URL = "https://us-central1-gcp-ruegreen-nprd-41678.cloudfunc
 const TOKEN_SERVICE_PASSPHRASE = "yourpassword";
 const JDS_PROJECTID = "64b55afb6d82725e4ec46d56";
 //DONT CHANGE THIS!!
-const JDS_POSTURL = "https://api-jds.prod-useast1.ciscowxdap.com/publish/v1/api/event?workspaceId=";
+const JDS_POSTURL = "https://api.wxcc-us1.cisco.com/publish/v1/api/event?workspaceId=";
 var JDS_Token = "";
 const GlobalGUID = crypto.randomUUID();
 var UserIdentified = false;
