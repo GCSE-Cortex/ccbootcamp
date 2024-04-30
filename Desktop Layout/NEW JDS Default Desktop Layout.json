@@ -115,21 +115,21 @@
                     "children": [
                       {
                         "comp": "customer-journey-widget",
-                        "script": "https://cjaas.cisco.com/widgets/customer-journey-9.0.0.js",
+                        "script": "https://cjaas.cisco.com/widgets/customer-journey-10.0.0/index.js",
                         "attributes": {
-                          "base-url": "https://api-jds.prod-useast1.ciscowxdap.com",
-                          "logs-on": "true",
-                          "project-id": "Your JDS Project ID",
-                          "template-id": "journey-default-template",
-                          "icon-data-path": "Your ICON file path",
-                          "limit": "50",
-                          "time-frame": "All",
-                          "live-stream": "true"
+                            "project-id": "Your JDS Project ID",
+                            "icon-data-url": "Your ICON file path",
+                            "limit": "50",
+                            "time-frame": "All",
+                            "show-alias-icon": "true",
+                            "live-stream": "true",
+                            "condensed-view": "true"
                         },
                         "properties": {
-                          "interactionData": "$STORE.agentContact.taskSelected",
-                          "bearerToken": "$STORE.auth.accessToken",
-                          "organizationId": "$STORE.agent.orgId"
+                            "interactionData": "$STORE.agentContact.taskSelected",
+                            "bearerToken": "$STORE.auth.accessToken",
+                            "organizationId": "$STORE.agent.orgId",
+                            "dataCenter": "$STORE.app.datacenter"
                         },
                         "wrapper": {
                           "title": "Customer Journey Widget",
@@ -284,21 +284,21 @@
                   "widgets": {
                     "right": {
                         "comp": "customer-journey-widget",
-                        "script": "https://cjaas.cisco.com/widgets/customer-journey-9.0.0.js",
+                        "script": "https://cjaas.cisco.com/widgets/customer-journey-10.0.0/index.js",
                         "attributes": {
-                          "base-url": "https://api-jds.prod-useast1.ciscowxdap.com",
-                          "logs-on": "true",
-                          "project-id":"Your JDS Project ID",
-                          "template-id": "journey-default-template",
-                          "icon-data-path": "Your ICON files path",
-                          "limit": "50",
-                          "time-frame": "All",
-                          "live-stream": "true"
+                            "project-id": "Your JDS Project ID",
+                            "icon-data-url": "Your ICON file path",
+                            "limit": "50",
+                            "time-frame": "All",
+                            "show-alias-icon": "true",
+                            "live-stream": "true",
+                            "condensed-view": "true"
                         },
                         "properties": {
-                          "interactionData": "$STORE.agentContact.taskSelected",
-                          "bearerToken": "$STORE.auth.accessToken",
-                          "organizationId": "$STORE.agent.orgId"
+                            "interactionData": "$STORE.agentContact.taskSelected",
+                            "bearerToken": "$STORE.auth.accessToken",
+                            "organizationId": "$STORE.agent.orgId",
+                            "dataCenter": "$STORE.app.datacenter"
                         },
                         "wrapper": {
                           "title": "Customer Journey Widget",
