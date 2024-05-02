@@ -288,7 +288,7 @@
                             "limit": "50",
                             "time-frame": "All",
                             "show-alias-icon": "true",
-                            "live-stream": "true",
+                            "live-stream": "true"
                         },
                         "properties": {
                             "interactionData": "$STORE.agentContact.taskSelected",
