@@ -352,7 +352,30 @@ document.getElementById('sendCallbackBtn').addEventListener('click', () => {
       sendEmail();
     } else emailForm.classList.add('was-validated');
   });
+  // Add event listener for SMS Modal Submit button
+  document.getElementById('sendSmsBtn').addEventListener('click', () => {
+    smsForm.classList.remove('was-validated');
+    bsToggle(bsSmsModal);
+    sendSMS();
+    /*
+    if (smsForm.checkValidity()){
+      smsForm.classList.remove('was-validated');
+      bsToggle(bsSmsModal);
   
+      if(smsNumber.value===""){
+          updateJDS(UserIdentity,"send sms")
+      }else{
+          //Set to True after we return from the updateJDS
+          UserIdentity = smsNumber.value;
+          updateJDS(UserIdentity,"send sms")
+          UserIdentified = true;
+      }	
+      sendSMS();
+    } else smsForm.classList.add('was-validated');
+    */
+    
+  });
+	/*
   // Add event listener for SMS Modal Submit button
   document.getElementById('sendSmsBtn').addEventListener('click', () => {
     if (smsForm.checkValidity()){
@@ -370,6 +393,8 @@ document.getElementById('sendCallbackBtn').addEventListener('click', () => {
       sendSMS();
     } else smsForm.classList.add('was-validated');
   });
+*/
+	
  /* 
   // Add event listener for SMS Modal Submit button
   document.getElementById('formLogin').addEventListener('click', () => {
