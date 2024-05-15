@@ -326,7 +326,7 @@ document.getElementById('sendCallbackBtn').addEventListener('click', () => {
           updateJDS(UserIdentity,"send callback")
       }else{
           //Set to True after we return from the updateJDS
-          UserIdentity = 1+callbackNumber.value;
+          UserIdentity = callbackNumber.value;
           updateJDS(UserIdentity,"send callback")
           UserIdentified = true;
       }	
@@ -363,7 +363,7 @@ document.getElementById('sendCallbackBtn').addEventListener('click', () => {
           updateJDS(UserIdentity,"send sms")
       }else{
           //Set to True after we return from the updateJDS
-          UserIdentity = 1+smsNumber.value;
+          UserIdentity = smsNumber.value;
           updateJDS(UserIdentity,"send sms")
           UserIdentified = true;
       }	
