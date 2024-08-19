@@ -23,6 +23,7 @@ const GlobalGUID = crypto.randomUUID();
 var UserIdentified = false;
 var UserIdentity = "unknown";
 const demoToolboxUserId = "1111";
+const CHJDSProjectID = "64b55afb6d82725e4ec46145";
 //These are images for Agent's face on OffCanvas Menu and success / failure Modals
 const AGENT_IMAGE = "https://wxcc-widgets.s3.us-west-1.amazonaws.com/agent.png";
 const SUCCESS_IMAGE = "https://wxcc-widgets.s3.us-west-1.amazonaws.com/success.svg";
