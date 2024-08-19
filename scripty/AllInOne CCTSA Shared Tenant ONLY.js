@@ -4,7 +4,7 @@
 	// dynamically load Bootstrap
 
   await import('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js');
-  let module = await import('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css', { assert: { type: 'css' }});
+  let module = await import('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css', { with: { type: 'css' }});
   document.adoptedStyleSheets.push(module.default); // append imported CSSStyleSheet 
   
 	console.log('Bootstrap loaded: ' + !!window.bootstrap);
